@@ -39,4 +39,5 @@ jobs:
           echo "El nombre de la base de datos es ${{ env.POSTGRESS_NAME }}"
           echo "La URL de la base de datos es ${{ env.POSTGRESS_URL }}"
       - name: cargar variables
-        run: echo "la variables es ${{vars.PRODUCCION}}"
+        if: ${{ vars.PRODUCCION != 'AWS' }}
+        run: echo "no hicimos un deploy a AWS"
