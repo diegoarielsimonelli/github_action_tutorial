@@ -20,8 +20,8 @@ jobs:
     env:
       # Define environment variables here
       PRODUCCION: "AWS"
-      POSTGRESS_NAME: ${ { secrets.POSTGRESS_NAME } }
-      POSTGRESS_URL: ${ { secrets.POSTGRESS_URL } }
+      POSTGRESS_NAME: ${{ secrets.POSTGRESS_NAME }}
+      POSTGRESS_URL: ${{ secrets.POSTGRESS_URL }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
